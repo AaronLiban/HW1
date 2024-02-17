@@ -57,24 +57,6 @@ public class Folder {
         files.remove(file);
     }
 
-    @Override
-    public String toString() {
-        String name = getName();
-        String subFolders = "";
-        for (Folder elements : getSubFolders()) {
-            //subFolders += "   ";
-            subFolders += elements.toString();
-        }
-        String files = "";
-        for (File elements : getFiles()) {
-            files += elements.toString();
-            files += "\n   ";
-        }
-        return name + "\n   " +
-                subFolders + "" +
-                files;
-    }
-
     public static String print(Folder folder) {
         int indent = 0;
         StringBuilder sb = new StringBuilder();
